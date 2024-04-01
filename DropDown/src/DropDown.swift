@@ -353,6 +353,20 @@ public final class DropDown: UIView {
 	}
     
     /**
+     The border color for the drop down itself.
+     */
+    @objc public dynamic var borderColor = DPDConstant.UI.BorderColor {
+        didSet { reloadAllComponents() }
+    }
+    
+    /**
+     The border width for the drop down itself.
+     */
+    @objc public dynamic var borderWidth = DPDConstant.UI.BorderWidth {
+        didSet { reloadAllComponents() }
+    }
+    
+    /**
      The NIB to use for DropDownCells
      
      Changing the cell nib automatically reloads the drop down.
@@ -546,6 +560,8 @@ private extension DropDown {
 		tableViewContainer.layer.shadowOffset = shadowOffset
 		tableViewContainer.layer.shadowOpacity = shadowOpacity
 		tableViewContainer.layer.shadowRadius = shadowRadius
+        tableViewContainer.layer.borderColor = borderColor.cgColor
+        tableViewContainer.layer.borderWidth = borderWidth
 
 		tableView.backgroundColor = tableViewBackgroundColor
 		tableView.separatorColor = separatorColor

@@ -52,7 +52,7 @@ A regular way to use DropDown in your project would be using Embedded Framework.
 
 Add source code:
 
-1. Download the [latest code version](http://github.com/AssistoLab/DropDown/archive/master.zip).
+1. Download the [latest code version](http://github.com/WePlanet/DropDown/archive/master.zip).
 2. Unzip the download file, copy `DropDown` folder to your project folder
 
 Add submodule
